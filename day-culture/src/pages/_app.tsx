@@ -8,7 +8,7 @@ import { globalStyle } from '@vanilla-extract/css';
 import Head from 'next/head';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [queryClient] = useState(() => new QueryClient());
+  const queryClient = new QueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>
