@@ -1,5 +1,5 @@
 import { container } from './styles.css';
-import MyComponent from './MyComponent';
+import MyComponent from '../components/MyComponent';
 
 export default function Entry() {
   return (
