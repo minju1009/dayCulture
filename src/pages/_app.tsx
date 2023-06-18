@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { RecoilRoot } from 'recoil';
-import { globalStyle } from '@vanilla-extract/css';
+import 'styles/globalStyle.css'
 
 import Head from 'next/head';
 
