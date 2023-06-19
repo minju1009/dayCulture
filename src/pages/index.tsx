@@ -1,4 +1,7 @@
-import Entry from "./Entry";
-export default function Home() {
-  return <Entry />;
+import Home from "components/Home"
+
+export default function HomePage() {
+  return (
+    <Home />
+  )
 }
