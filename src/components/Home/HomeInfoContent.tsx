@@ -1,11 +1,10 @@
 import { SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 
-import SwiperWrap from '../components/Swiper';
+import SwiperWrap from 'components/components/Swiper';
 import useGetHomeInfoQuery from './queries/useGetHomeInfoQuery';
 
-import { swiperDescription, swiperSlide, swiperTitle } from '../components/swiper.css';
-import { container } from './style.css';
+import { swiperDescription, swiperSlide, swiperTitle } from 'components/components/swiper.css';
 
 export default function HomeInfoContent() {
   const { data: homeInfoArr } = useGetHomeInfoQuery();
@@ -13,7 +12,7 @@ export default function HomeInfoContent() {
   return (
     <SwiperWrap hasOverLay slidesPerView={'auto'}>
       {homeInfoArr?.map((item) => (
-        <div className={container} key={item?.mainImg}>
+        <div key={item?.mainImg}>
           <SwiperSlide className={swiperSlide}>
             <Image priority src={item?.mainImg} alt={'main-image'} width={240} height={350} />
             <span className={swiperTitle}>{item?.title}</span>

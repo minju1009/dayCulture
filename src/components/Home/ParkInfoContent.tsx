@@ -5,7 +5,6 @@ import SwiperWrap from '../components/Swiper';
 import useGetParkInfoQuery from './queries/useGetParkInfoQuery';
 
 import { swiperDescription, swiperSlide, swiperTitle } from '../components/swiper.css';
-import { container } from './style.css';
 
 export default function ParkInfoContent() {
   const { data: parkInfoArr } = useGetParkInfoQuery();
@@ -13,7 +12,7 @@ export default function ParkInfoContent() {
   return (
     <SwiperWrap hasOverLay slidesPerView={2}>
       {parkInfoArr?.map((item) => (
-        <div className={container} key={item?.pIdx}>
+        <div key={item?.pIdx}>
           {item?.pImg && (
             <SwiperSlide className={swiperSlide}>
               <Image priority src={item?.pImg} alt={'main-image'} width={120} height={120} />
