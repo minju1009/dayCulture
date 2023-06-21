@@ -1,7 +1,1 @@
-import Home from "components/Home"
-
-export default function HomePage() {
-  return (
-    <Home />
-  )
-}
+export {default} from "components/Home"
