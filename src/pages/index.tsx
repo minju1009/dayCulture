@@ -1,4 +1,1 @@
-import Entry from "./Entry";
-export default function Home() {
-  return <Entry />;
-}
+export {default} from "components/Home"
