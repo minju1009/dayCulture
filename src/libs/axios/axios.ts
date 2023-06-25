@@ -1,13 +1,10 @@
 import axios from 'axios';
 
 const axiosClient = axios.create({
-  baseURL: 'https://api.giphy.com/v1/gifs',
+  baseURL: `http://openapi.seoul.go.kr:8088/4b454e53496d696e3938677063524f`,
   timeout: 8000,
   headers: {
     'Content-type': 'application/json',
-  },
-  params: {
-    api_key: process.env.GIPHY_API_KEY,
   },
 });
 

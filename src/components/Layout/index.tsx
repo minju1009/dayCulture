@@ -3,9 +3,10 @@ import Footer from "./Footer";
 import { mainContainer } from "./layout.css";
 import { PropsWithChildren } from "react";
 
-interface ILayoutProps{
+interface ILayoutProps {
     children?: React.ReactNode
 }
+
 
 export default function Layout({children}:PropsWithChildren<ILayoutProps>){
     return(
