@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { navContainer, navMenu } from './layout.css';
+import { footer, navContainer, navMenu } from './layout.css';
 import { AiOutlineHome, AiOutlineSearch, AiOutlinePlusCircle } from 'react-icons/ai';
 import { GoBookmark } from 'react-icons/go';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className={footer}>
       <nav className={navContainer}>
         <Link href="/">
           <div className={navMenu}>
