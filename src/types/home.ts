@@ -1,3 +1,8 @@
+export interface IGeolocation {
+  latitude: undefined | number;
+  longitude: undefined | number;
+}
+
 export interface IHomeInfoTypes {
   codename: string;
   guname: string;
@@ -40,4 +45,28 @@ export interface IParkInfoTypes {
   templateUrl: string;
   useRefer: string;
   visitRoad: string;
+}
+
+export interface ISeoulGilInfoTypes {
+  courseCategory: number;
+  courseCategoryNm: string;
+  southNorthDiv: string;
+  southNorthDivNm: string;
+  areaGu: string;
+  distance: string;
+  leadTime: string;
+  courseLevel: string;
+  voteCnt: string;
+  relateSubway: string;
+  trafficInfo: string;
+  content: string;
+  pdfFilePath: string;
+  courseName: string;
+  regDate: string;
+  detailCourse: string;
+  cpiIdx: number;
+  cpiName: string;
+  x: string;
+  y: string;
+  cpiContent: string;
 }

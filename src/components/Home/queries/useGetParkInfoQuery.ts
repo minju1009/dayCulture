@@ -7,8 +7,8 @@ import { snakeToCamel } from 'utils/snakeToCamel';
 import convertKeysToLowercase from 'utils/convertKeysToLowercase';
 
 const fetchParkInfo = async () => {
-  const { data } = await axiosClient.get('/json/SearchParkInfoService/1/8');
-  console.log(data);
+  const { data } = await axiosClient.get('/json/SearchParkInfoService/1/8/은평구');
+
   return snakeToCamel(convertKeysToLowercase(data.SearchParkInfoService.row));
 };
 
