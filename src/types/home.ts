@@ -70,3 +70,32 @@ export interface ISeoulGilInfoTypes {
   y: string;
   cpiContent: string;
 }
+
+export interface IFilter {
+  interest: string[];
+  area: string;
+  date: string;
+  fee: string;
+}
+
+export interface IFilterProps {
+  isOpen: boolean;
+  openAccordion: (name: AccordionFilterType) => void;
+  closeAccordion: () => void;
+}
+
+export type AccordionFilterType = '관심분야' | '관심지역' | '날짜' | '관람료' | undefined;
+
+export type InterestOptionType =
+  | '클래식'
+  | '콘서트'
+  | '축제'
+  | '전시/미술'
+  | '영화'
+  | '연극'
+  | '뮤지컬/오페라'
+  | '무용'
+  | '독주/독창회'
+  | '기타'
+  | '국악'
+  | '교육/체험';
