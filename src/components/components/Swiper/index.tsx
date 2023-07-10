@@ -1,6 +1,6 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import 'swiper/css';
-import { swiper, swiperSlide } from './swiper.css';
+import { swiper } from './swiper.css';
 import { swiperOverlay } from './swiper.css';
 
 interface ISwiperWrapProps {

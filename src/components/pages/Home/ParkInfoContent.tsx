@@ -1,10 +1,10 @@
 import { SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 
-import SwiperWrap from '../components/Swiper';
+import SwiperWrap from '../../components/Swiper';
 import useGetParkInfoQuery from './queries/useGetParkInfoQuery';
 
-import { swiperDescription, swiperSlide, swiperTitle } from '../components/swiper.css';
+import { swiperDescription, swiperSlide, swiperTitle } from '../../components/Swiper/swiper.css';
 
 export default function ParkInfoContent() {
   const { data: parkInfoArr } = useGetParkInfoQuery();

@@ -1,13 +1,10 @@
 import { useRecoilState } from 'recoil';
-import { userGeolocationState } from '../../recoil/home';
+import { userGeolocationState } from '../../../recoil/home';
 import { useEffect } from 'react';
-import Home from '../Home';
-import useGetCurrentAddress from '../Home/queries/useGetCurrentAddress';
+import Home from '../../pages/Home';
 
 export default function Entry() {
   const [userGeolocation, setUserGeolocation] = useRecoilState(userGeolocationState);
-  const { latitude, longitude } = userGeolocation;
-  const { data } = useGetCurrentAddress(latitude, longitude);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -26,15 +23,15 @@ export default function Entry() {
     console.error('Geolocation is not supported by this browser');
   }, []);
 
-  // let map: google.maps.Map;
-  // const center: google.maps.LatLngLiteral = { lat: 30, lng: -110 };
-  //
-  // function initMap(): void {
-  //   map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-  //     center,
-  //     zoom: 8,
-  //   });
-  // }
+  let map: google.maps.Map;
+  const center: google.maps.LatLngLiteral = { lat: 30, lng: -110 };
+
+  function initMap(): void {
+    map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
+      center,
+      zoom: 8,
+    });
+  }
 
   return <Home />;
 }
