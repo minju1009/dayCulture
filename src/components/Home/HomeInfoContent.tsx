@@ -11,14 +11,12 @@ export default function HomeInfoContent() {
 
   return (
     <SwiperWrap hasOverLay slidesPerView={'auto'}>
-      {homeInfoArr?.map((item) => (
-        <div key={item?.mainImg}>
-          <SwiperSlide className={swiperSlide}>
-            <Image priority src={item?.mainImg} alt={'main-image'} width={240} height={350} />
-            <span className={swiperTitle}>{item?.title}</span>
-            <div className={swiperDescription}>{item?.date}</div>
-          </SwiperSlide>
-        </div>
+      {homeInfoArr?.map((item, idx) => (
+        <SwiperSlide className={swiperSlide} key={`homeInfo-${idx}`}>
+          <Image priority src={item?.mainImg} alt={'main-image'} width={240} height={350} />
+          <span className={swiperTitle}>{item?.title}</span>
+          <div className={swiperDescription}>{item?.date}</div>
+        </SwiperSlide>
       ))}
     </SwiperWrap>
   );
