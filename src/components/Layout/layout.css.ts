@@ -30,6 +30,6 @@ export const footer = style({
   left: 0,
   bottom: 0,
   width: '100%',
-  zIndex: 10,
+  zIndex: 1,
   backgroundColor: 'white',
 });
